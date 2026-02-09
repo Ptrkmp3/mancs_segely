@@ -5,20 +5,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Páciensek</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="card" style="width: 18rem;">
-    <img
-      src="data:image/jpeg;base64,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"
-      class="card-img-top" alt="Német juhászkutya">
-    <div class="card-body">
-      <h5 class="card-title">Német juhászkutya</h5>
-      <p class="card-text">A német juhászkutya a világ egyik legnépszerűbb és legsokoldalúbb kutyafajtája, amely
-        intelligenciájáról, munkabírásáról és hűségéről ismert</p>
+<div class="container mt-4">
+  <div class="row g-4"> 
+    
+   
+    <div class="col-12 col-md-4"> 
+ 
+      <div class="card h-100">
+        <img src="nemet-juhasz-1.jpg" class="card-img-top" alt="Német juhászkutya">
+        <div class="card-body">
+          <h5 class="card-title">Német juhászkutya</h5>
+          <p class="card-text">Hűséges, okos és sokoldalú munkakutya.</p>
+          <a href="#" class="btn btn-primary">Részletek</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="nemet-juhasz-2.jpg" class="card-img-top" alt="Német juhasz">
+        <div class="card-body">
+          <h5 class="card-title">Képzés</h5>
+          <p class="card-text">Rendkívül gyorsan tanul és imád dolgozni.</p>
+          <a href="#" class="btn btn-primary">Tréning tippek</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="nemet-juhasz-3.jpg" class="card-img-top" alt="Kutyus">
+        <div class="card-body">
+          <h5 class="card-title">Egészség</h5>
+          <p class="card-text">Fontos a megfelelő táplálás és a rendszeres mozgás.</p>
+          <a href="#" class="btn btn-primary">Tippek</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row g-4"> 
+
+    <div class="col-12 col-md-4"> 
+   
+      <div class="card h-100">
+        <img src="nemet-juhasz-1.jpg" class="card-img-top" alt="Német juhászkutya">
+        <div class="card-body">
+          <h5 class="card-title">Német juhászkutya</h5>
+          <p class="card-text">Hűséges, okos és sokoldalú munkakutya.</p>
+          <a href="#" class="btn btn-primary">Részletek</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="nemet-juhasz-2.jpg" class="card-img-top" alt="Német juhasz">
+        <div class="card-body">
+          <h5 class="card-title">Képzés</h5>
+          <p class="card-text">Rendkívül gyorsan tanul és imád dolgozni.</p>
+          <a href="#" class="btn btn-primary">Tréning tippek</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-md-4">
+      <div class="card h-100">
+        <img src="nemet-juhasz-3.jpg" class="card-img-top" alt="Kutyus">
+        <div class="card-body">
+          <h5 class="card-title">Egészség</h5>
+          <p class="card-text">Fontos a megfelelő táplálás és a rendszeres mozgás.</p>
+          <a href="#" class="btn btn-primary">Tippek</a>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 </body>
 
 </html>
